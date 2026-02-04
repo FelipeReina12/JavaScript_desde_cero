@@ -32,7 +32,7 @@ const myFuncArrow = (name) => {
 myFuncArrow("Felipe Reina")
 
 // Una forma más simplificada de escribir la función
-const myFuncArrow1 = name2 => console.log(`Bienvendio estudiante: ${name2}`)
+const myFuncArrow1 = name2 => console.log(name2)
 myFuncArrow("Juan Felipe Reina")
 
 // Parámetros
@@ -63,6 +63,13 @@ function extern(){
     intern()  // Llamamos la función dentro de la función externa para que funcione
 }
 extern()
+// intern()  Error: fuera del scope
 
-//Curso hasta funciones anidadas
-// min: 3:48:33
+// Funciones de orden superior
+function applyFunction(func, param){  // Creamos una función y como parámetro le pasamos otra función con su parametro
+    func(param)  // llamamos a la función que pasmos como parámetro
+}
+applyFunction(myFuncArrow1, "Función de orden superior")  // Llamamos a la función exterior con la función interior
+
+
+
