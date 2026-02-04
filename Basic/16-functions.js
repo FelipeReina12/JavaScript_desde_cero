@@ -71,5 +71,24 @@ function applyFunction(func, param){  // Creamos una función y como parámetro 
 }
 applyFunction(myFuncArrow1, "Función de orden superior")  // Llamamos a la función exterior con la función interior
 
+// forEach 
+// Para Arrays
+array = [1, "Felipe", true, 23, "Mecatrónica", null]
 
+// Para sets
+mySet = new Set(["Brais", 37, "MoureDev", true])
+
+// Para maps
+myMap = new Map([
+    ["name", "felipe"],
+    ["email", "correo@correo.com"],
+    ["edad", 23],
+    ["ciudad", "Bogotá"],
+    ["carrera", "Ingeniería"],
+    ["celular", "3245612291"]
+])
+
+array.forEach((value) => console.log(value))
+mySet.forEach((value) => console.log(value))
+myMap.forEach((value) => console.log(value))
 
