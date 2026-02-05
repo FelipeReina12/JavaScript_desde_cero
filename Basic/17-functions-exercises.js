@@ -34,7 +34,7 @@ function mayus (arrayStrings){
     return arrayStrings.map(p => p.toUpperCase())
 }
 let result = mayus(["Hola", "mayus", "Java"])
-console.log(result)
+// console.log(result)
 
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
 function primoNoPrimo(num){
@@ -55,7 +55,7 @@ function primoNoPrimo(num){
     }
 }
 let primo = primoNoPrimo(10)
-console.log(primo)
+// console.log(primo)
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
 nuevoArray = []
@@ -67,7 +67,7 @@ function union(array1, array2){
     }
 }
 union(["2", 55, 4, "JavaScrit", "python", "camisa"], ["2", 2, "JavaScript", "python", 55])
-console.log(nuevoArray)
+// console.log(nuevoArray)
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
@@ -81,10 +81,36 @@ function sumaPares(arrayNumeros){
     return suma
 }
 const res = sumaPares([2, 3, 4, 8, 23])
-console.log(res)
+// console.log(res)
 
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+arrayCuadrado = []
+
+function numsq(array8){
+    for(let value of array8){
+        arrayCuadrado.push(value ** 2)
+    } 
+}
+numsq([2, 4, 6, 8, 10])
+console.log(arrayCuadrado)
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+let reverse =""
+
+function inversorPalabras(str2){
+    for(let char of str2){
+        reverse = char + reverse
+    }
+}
+inversorPalabras("zo ed ogam")
+console.log(reverse)
 
 // 10. Crea una función que calcule el factorial de un número dado
+function factorial(numero){
+    let result = 1
+    for(let i = 2; i <= numero; i++){
+        result *= i
+    }
+    return result
+}
+console.log(factorial(5))
