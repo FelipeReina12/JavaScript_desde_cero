@@ -18,7 +18,7 @@ function numeroVocales(string){
     const vocales = ["a", "e", "i", "o", "u"];
     let suma = 0;
 
-    for(let char of string()){
+    for(let char of string){
         if(vocales.includes(char)){
             suma += 1;
         }
@@ -28,6 +28,7 @@ function numeroVocales(string){
 
 let resultado = numeroVocales("JavaScript desde cero")
 console.log(resultado)
+
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
 
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
