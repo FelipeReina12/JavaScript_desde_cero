@@ -27,15 +27,61 @@ function numeroVocales(string){
 }
 
 let resultado = numeroVocales("JavaScript desde cero")
-console.log(resultado)
+// console.log(resultado)
 
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
+function mayus (arrayStrings){
+    return arrayStrings.map(p => p.toUpperCase())
+}
+let result = mayus(["Hola", "mayus", "Java"])
+console.log(result)
 
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
+function primoNoPrimo(num){
+    if (num <= 1) {
+        return `El numero ${num} no es primo`;
+    } else if (num === 2) {
+        return `El numero ${num} es primo`;
+    } else if (num % 2 === 0) {
+        return `El numero ${num} no es primo`;
+    } else {
+        // Chequea divisores impares hasta la raíz cuadrada
+        for (let i = 3; i <= Math.sqrt(num); i += 2) {
+            if (num % i === 0) {
+                return `El numero ${num} no es primo`;
+            }
+        }
+        return `El numero ${num} es primo`;
+    }
+}
+let primo = primoNoPrimo(10)
+console.log(primo)
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+nuevoArray = []
+function union(array1, array2){
+    for(let char of array1){
+        if(array2.includes(char)){
+            nuevoArray.push(char)
+        } 
+    }
+}
+union(["2", 55, 4, "JavaScrit", "python", "camisa"], ["2", 2, "JavaScript", "python", 55])
+console.log(nuevoArray)
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+
+function sumaPares(arrayNumeros){
+    let suma = 0
+    for(let value of arrayNumeros){
+        if(value % 2 == 0){
+            suma += value
+        }
+    }
+    return suma
+}
+const res = sumaPares([2, 3, 4, 8, 23])
+console.log(res)
 
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
 
